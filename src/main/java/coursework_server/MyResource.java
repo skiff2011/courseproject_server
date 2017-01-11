@@ -25,12 +25,12 @@ public class MyResource {
      */
     @GET
     @Path("faculties/getall")
-    @Produces(MediaType.TEXT_PLAIN)
-    public Response getAllFaculties() {
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Faculty> getAllFaculties() {
         DBWorker worker=new DBWorker();
         List<Faculty> list=worker.getFaculties();
         worker.closeConnection();
-        return sendList(list);
+        return list;
     }
 
     @GET

@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95c69e55-a6a2-474b-8eed-0aa17dd2e72d" name="Default" comment="" />
+    <list default="true" id="95c69e55-a6a2-474b-8eed-0aa17dd2e72d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_antlr_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_asm_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_core_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_moxy_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_entity_filtering_2_16.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_moxy_2_16.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/coursework_server/DBWorker.class" afterPath="$PROJECT_DIR$/target/classes/coursework_server/DBWorker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/coursework_server/MyResource.class" afterPath="$PROJECT_DIR$/target/classes/coursework_server/MyResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/coursework_server/WEB-INF/classes/coursework_server/DBWorker.class" afterPath="$PROJECT_DIR$/target/coursework_server/WEB-INF/classes/coursework_server/DBWorker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/coursework_server/WEB-INF/classes/coursework_server/MyResource.class" afterPath="$PROJECT_DIR$/target/coursework_server/WEB-INF/classes/coursework_server/MyResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/coursework_server_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/coursework_server_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coursework_server.iml" afterPath="$PROJECT_DIR$/coursework_server.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java" afterPath="$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +41,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyResource.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="51" column="54" lean-forward="false" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+            <state relative-caret-position="366">
+              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -40,10 +66,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding>
-                <marker date="1484133162321" expanded="true" signature="433:989" ph="..." />
-                <marker date="1484133162321" expanded="true" signature="850:978" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,22 +74,9 @@
       <file leaf-file-name="DBWorker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="1955">
               <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1484147685520" expanded="true" signature="1115:1136" ph="SELECT * FRO... faculty" />
-                <marker date="1484147685520" expanded="true" signature="1711:1886" ph="SELECT * FRO... faculty" />
-                <marker date="1484147685520" expanded="true" signature="2593:2768" ph="SELECT idGro... groupt" />
-                <marker date="1484147685520" expanded="true" signature="2593:2824" ph="SELECT idGro... groupt" />
-                <marker date="1484147685520" expanded="true" signature="3663:3847" ph="SELECT idSub... subject" />
-                <marker date="1484147685520" expanded="true" signature="4701:4867" ph="SELECT idCaf... cafedra" />
-                <marker date="1484147685520" expanded="true" signature="5556:5722" ph="SELECT idCaf... cafedra" />
-                <marker date="1484147685520" expanded="true" signature="5556:5776" ph="SELECT idCaf... cafedra" />
-                <marker date="1484147685520" expanded="true" signature="6636:6845" ph="SELECT speci... speciality" />
-                <marker date="1484147685520" expanded="true" signature="7607:7816" ph="SELECT speci... speciality" />
-                <marker date="1484147685520" expanded="true" signature="7607:7873" ph="SELECT speci... speciality" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,10 +84,23 @@
       <file leaf-file-name="Cafedra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Cafedra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="153">
+              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding>
-                <element signature="e#277#278#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="false" />
+                <element signature="e#338#339#0" expanded="false" />
+                <element signature="e#371#372#0" expanded="false" />
+                <element signature="e#403#404#0" expanded="false" />
+                <element signature="e#450#451#0" expanded="false" />
+                <element signature="e#492#493#0" expanded="false" />
+                <element signature="e#523#524#0" expanded="false" />
+                <element signature="e#550#551#0" expanded="false" />
+                <element signature="e#590#591#0" expanded="false" />
+                <element signature="e#622#623#0" expanded="false" />
+                <element signature="e#660#661#0" expanded="false" />
+                <element signature="e#694#695#0" expanded="false" />
+                <element signature="e#748#749#0" expanded="false" />
+                <element signature="e#794#795#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,7 +112,28 @@
             <state relative-caret-position="612">
               <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
               <folding>
-                <element signature="e#1067#1068#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="false" />
+                <element signature="e#336#337#0" expanded="false" />
+                <element signature="e#369#370#0" expanded="false" />
+                <element signature="e#397#398#0" expanded="false" />
+                <element signature="e#430#431#0" expanded="false" />
+                <element signature="e#462#463#0" expanded="false" />
+                <element signature="e#509#510#0" expanded="false" />
+                <element signature="e#551#552#0" expanded="false" />
+                <element signature="e#585#586#0" expanded="false" />
+                <element signature="e#615#616#0" expanded="false" />
+                <element signature="e#661#662#0" expanded="false" />
+                <element signature="e#699#700#0" expanded="false" />
+                <element signature="e#730#731#0" expanded="false" />
+                <element signature="e#757#758#0" expanded="false" />
+                <element signature="e#797#798#0" expanded="false" />
+                <element signature="e#829#830#0" expanded="false" />
+                <element signature="e#866#867#0" expanded="false" />
+                <element signature="e#899#900#0" expanded="false" />
+                <element signature="e#951#952#0" expanded="false" />
+                <element signature="e#995#996#0" expanded="false" />
+                <element signature="e#1121#1122#0" expanded="false" />
+                <element signature="e#1167#1168#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -104,6 +148,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -112,15 +159,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/Faculty.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/Group.java" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/Subject.java" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/Cafedra.java" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/Speciality.java" />
-        <option value="$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java" />
       </list>
     </option>
   </component>
@@ -158,93 +205,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="coursework_server" />
+              <option name="myItemId" value="courseproject_server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="coursework_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coursework_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coursework_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coursework_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coursework_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coursework_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coursework_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coursework_server" />
+              <option name="myItemId" value="courseproject_server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -503,6 +480,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -624,6 +602,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -728,11 +712,13 @@
       <updated>1484099720728</updated>
       <workItem from="1484099724424" duration="32000" />
       <workItem from="1484130895624" duration="12293000" />
+      <workItem from="1484158938948" duration="2248000" />
+      <workItem from="1484165116399" duration="127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12325000" />
+    <option name="totallyTimeSpent" value="14700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -741,7 +727,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -757,13 +743,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33916554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25787964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.265043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -771,6 +756,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -788,23 +774,85 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Cafedra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#310#311#0" expanded="false" />
+            <element signature="e#338#339#0" expanded="false" />
+            <element signature="e#371#372#0" expanded="false" />
+            <element signature="e#403#404#0" expanded="false" />
+            <element signature="e#450#451#0" expanded="false" />
+            <element signature="e#492#493#0" expanded="false" />
+            <element signature="e#523#524#0" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#660#661#0" expanded="false" />
+            <element signature="e#694#695#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
+            <element signature="e#794#795#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Subject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="612">
+          <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <folding>
+            <element signature="e#311#312#0" expanded="false" />
+            <element signature="e#336#337#0" expanded="false" />
+            <element signature="e#369#370#0" expanded="false" />
+            <element signature="e#397#398#0" expanded="false" />
+            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#462#463#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#585#586#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#699#700#0" expanded="false" />
+            <element signature="e#730#731#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
+            <element signature="e#797#798#0" expanded="false" />
+            <element signature="e#829#830#0" expanded="false" />
+            <element signature="e#866#867#0" expanded="false" />
+            <element signature="e#899#900#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#995#996#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1167#1168#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/97b45410-0aae-4917-b6f3-40da92b15e74/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -816,63 +864,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <marker date="1484133162321" expanded="true" signature="433:989" ph="..." />
-            <marker date="1484133162321" expanded="true" signature="850:978" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Faculty.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="e#218#219#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="e#279#280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Speciality.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1955">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Cafedra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="238">
           <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
-            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="false" />
+            <element signature="e#338#339#0" expanded="false" />
+            <element signature="e#371#372#0" expanded="false" />
+            <element signature="e#403#404#0" expanded="false" />
+            <element signature="e#450#451#0" expanded="false" />
+            <element signature="e#492#493#0" expanded="false" />
+            <element signature="e#523#524#0" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#660#661#0" expanded="false" />
+            <element signature="e#694#695#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
+            <element signature="e#794#795#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -882,36 +904,150 @@
         <state relative-caret-position="612">
           <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
           <folding>
-            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="false" />
+            <element signature="e#336#337#0" expanded="false" />
+            <element signature="e#369#370#0" expanded="false" />
+            <element signature="e#397#398#0" expanded="false" />
+            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#462#463#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#585#586#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#699#700#0" expanded="false" />
+            <element signature="e#730#731#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
+            <element signature="e#797#798#0" expanded="false" />
+            <element signature="e#829#830#0" expanded="false" />
+            <element signature="e#866#867#0" expanded="false" />
+            <element signature="e#899#900#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#995#996#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1167#1168#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/97b45410-0aae-4917-b6f3-40da92b15e74/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Faculty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Speciality.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <folding>
+            <element signature="e#311#312#0" expanded="false" />
+            <element signature="e#336#337#0" expanded="false" />
+            <element signature="e#369#370#0" expanded="false" />
+            <element signature="e#397#398#0" expanded="false" />
+            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#462#463#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#585#586#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#699#700#0" expanded="false" />
+            <element signature="e#730#731#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
+            <element signature="e#797#798#0" expanded="false" />
+            <element signature="e#829#830#0" expanded="false" />
+            <element signature="e#866#867#0" expanded="false" />
+            <element signature="e#899#900#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#995#996#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1167#1168#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="1955">
           <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Cafedra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1484147685520" expanded="true" signature="1115:1136" ph="SELECT * FRO... faculty" />
-            <marker date="1484147685520" expanded="true" signature="1711:1886" ph="SELECT * FRO... faculty" />
-            <marker date="1484147685520" expanded="true" signature="2593:2768" ph="SELECT idGro... groupt" />
-            <marker date="1484147685520" expanded="true" signature="2593:2824" ph="SELECT idGro... groupt" />
-            <marker date="1484147685520" expanded="true" signature="3663:3847" ph="SELECT idSub... subject" />
-            <marker date="1484147685520" expanded="true" signature="4701:4867" ph="SELECT idCaf... cafedra" />
-            <marker date="1484147685520" expanded="true" signature="5556:5722" ph="SELECT idCaf... cafedra" />
-            <marker date="1484147685520" expanded="true" signature="5556:5776" ph="SELECT idCaf... cafedra" />
-            <marker date="1484147685520" expanded="true" signature="6636:6845" ph="SELECT speci... speciality" />
-            <marker date="1484147685520" expanded="true" signature="7607:7816" ph="SELECT speci... speciality" />
-            <marker date="1484147685520" expanded="true" signature="7607:7873" ph="SELECT speci... speciality" />
+            <element signature="e#310#311#0" expanded="false" />
+            <element signature="e#338#339#0" expanded="false" />
+            <element signature="e#371#372#0" expanded="false" />
+            <element signature="e#403#404#0" expanded="false" />
+            <element signature="e#450#451#0" expanded="false" />
+            <element signature="e#492#493#0" expanded="false" />
+            <element signature="e#523#524#0" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#660#661#0" expanded="false" />
+            <element signature="e#694#695#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
+            <element signature="e#794#795#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="51" column="54" lean-forward="false" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+        <state relative-caret-position="366">
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
           <folding />
         </state>
       </provider>
