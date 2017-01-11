@@ -104,7 +104,29 @@ public class DBWorker {
                 cafedra.setId(set.getInt("idCafedra"));
                 cafedra.setFacultyId(set.getInt("idFaculty_fk"));
                 cafedra.setName(set.getString("cafedra.Name"));
-                cafedra.setFacultyName("faculty.Name");
+                cafedra.setFacultyName(set.getString("faculty.Name"));
+                cafedras.add(cafedra);
+            }
+            return cafedras;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public List<Cafedra> getCafedras(int facultyId){
+        try {
+            PreparedStatement statement=connection.prepareStatement("SELECT idCafedra,cafedra.Name,idFaculty_fk,faculty.Name FROM courseworkschema.cafedra\n" +
+                    "JOIN faculty ON cafedra.idFaculty_fk=faculty.idFaculty " +
+                    "where cafedra.idFaculty_fk=?");
+            statement.setInt(1,facultyId);
+            List<Cafedra> cafedras=new ArrayList<>();
+            ResultSet resultSet=statement.executeQuery();
+            while (resultSet.next()){
+                Cafedra cafedra=new Cafedra();
+                cafedra.setId(resultSet.getInt("idCafedra"));
+                cafedra.setFacultyId(resultSet.getInt("idFaculty_fk"));
+                cafedra.setName(resultSet.getString("cafedra.Name"));
+                cafedra.setFacultyName(resultSet.getString("faculty.Name"));
                 cafedras.add(cafedra);
             }
             return cafedras;

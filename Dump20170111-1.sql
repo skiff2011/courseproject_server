@@ -27,13 +27,13 @@ DROP TABLE IF EXISTS `Attestation`;
 CREATE TABLE `Attestation` (
   `idAttestation` int(11) NOT NULL,
   `Status` varchar(45) DEFAULT NULL,
-  `idStudent_fk` int(11) NOT NULL,
-  `idSubject_fk` int(11) NOT NULL,
+  `idStudent_fk` int(11) DEFAULT NULL,
+  `idSubject_fk` int(11) DEFAULT NULL,
   PRIMARY KEY (`idAttestation`),
-  KEY `fk_Attestation_1_idx` (`idStudent_fk`),
-  KEY `fk_Attestation_Subject_fk_idx` (`idSubject_fk`),
-  CONSTRAINT `fk_Attestation_1` FOREIGN KEY (`idStudent_fk`) REFERENCES `Student` (`idStudent`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Attestation_Subject_fk` FOREIGN KEY (`idSubject_fk`) REFERENCES `Subject` (`idSubject`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_Attestation_Student_idx` (`idStudent_fk`),
+  KEY `fk_Attestation_Subject_idx` (`idSubject_fk`),
+  CONSTRAINT `fk_Attestation_Student` FOREIGN KEY (`idStudent_fk`) REFERENCES `Student` (`idStudent`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Attestation_Subject` FOREIGN KEY (`idSubject_fk`) REFERENCES `Subject` (`idSubject`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -43,7 +43,7 @@ CREATE TABLE `Attestation` (
 
 LOCK TABLES `Attestation` WRITE;
 /*!40000 ALTER TABLE `Attestation` DISABLE KEYS */;
-INSERT INTO `Attestation` VALUES (1,'',1,100011);
+INSERT INTO `Attestation` VALUES (1,NULL,1,100011),(2,NULL,1,100024),(3,NULL,1,100035),(4,NULL,1,100058),(5,NULL,2,100011),(6,NULL,2,100024),(7,NULL,2,100035),(8,NULL,2,100058),(9,NULL,3,100011),(10,NULL,3,100024),(11,NULL,3,100035),(12,NULL,3,100058),(13,NULL,4,100011),(14,NULL,4,100024),(15,NULL,4,100035),(16,NULL,4,100058),(17,NULL,5,100011),(18,NULL,5,100024),(19,NULL,5,100035),(20,NULL,5,100058);
 /*!40000 ALTER TABLE `Attestation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +96,7 @@ CREATE TABLE `Faculty` (
 
 LOCK TABLES `Faculty` WRITE;
 /*!40000 ALTER TABLE `Faculty` DISABLE KEYS */;
-INSERT INTO `Faculty` VALUES (1000,'FICT'),(3000,'FRE'),(2000,'IASA'),(1,'ФИВТ');
+INSERT INTO `Faculty` VALUES (1000,'FICT'),(3000,'FRE'),(2000,'IASA');
 /*!40000 ALTER TABLE `Faculty` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,7 +180,7 @@ CREATE TABLE `ProgressStudent` (
 
 LOCK TABLES `ProgressStudent` WRITE;
 /*!40000 ALTER TABLE `ProgressStudent` DISABLE KEYS */;
-INSERT INTO `ProgressStudent` VALUES (1,1,1,1,100011),(2,2,2,2,100024);
+INSERT INTO `ProgressStudent` VALUES (1,1,1,1,100011),(2,2,2,2,100024),(3,20,20,20,100024),(4,21,16,35,100035),(5,22,21,20,100011);
 /*!40000 ALTER TABLE `ProgressStudent` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,7 +206,7 @@ CREATE TABLE `RequirementsSubject` (
 
 LOCK TABLES `RequirementsSubject` WRITE;
 /*!40000 ALTER TABLE `RequirementsSubject` DISABLE KEYS */;
-INSERT INTO `RequirementsSubject` VALUES (1,1,1,1);
+INSERT INTO `RequirementsSubject` VALUES (1,1,1,1),(2,20,15,5),(3,12,4,8),(4,15,15,4);
 /*!40000 ALTER TABLE `RequirementsSubject` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -247,19 +247,16 @@ DROP TABLE IF EXISTS `Student`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Student` (
   `idStudent` int(11) NOT NULL,
-  `Surname` varchar(45) NOT NULL,
-  `Name` varchar(45) NOT NULL,
+  `Surname` varchar(45) DEFAULT NULL,
+  `Name` varchar(45) DEFAULT NULL,
   `Patronymic` varchar(45) DEFAULT NULL,
   `idProgressStudent_fk` int(11) DEFAULT NULL,
-  `idAttestation_fk` int(11) DEFAULT NULL,
   `idGroup_fk` int(11) DEFAULT NULL,
   PRIMARY KEY (`idStudent`),
-  KEY `fk_Student_Group_fk_idx` (`idGroup_fk`),
-  KEY `fk_Student_Progress_id_idx` (`idProgressStudent_fk`),
-  KEY `fk_Student_Attestation_id_idx` (`idAttestation_fk`),
-  CONSTRAINT `fk_Student_Attestation_id` FOREIGN KEY (`idAttestation_fk`) REFERENCES `Attestation` (`idAttestation`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  KEY `fk_Student_Group_idx` (`idGroup_fk`),
+  KEY `fk_Student_Progress_idx` (`idProgressStudent_fk`),
   CONSTRAINT `fk_Student_Group` FOREIGN KEY (`idGroup_fk`) REFERENCES `GroupT` (`idGroup`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Student_Progress_id` FOREIGN KEY (`idProgressStudent_fk`) REFERENCES `ProgressStudent` (`idProgressStudent`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_Student_Progress` FOREIGN KEY (`idProgressStudent_fk`) REFERENCES `ProgressStudent` (`idProgressStudent`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -269,7 +266,7 @@ CREATE TABLE `Student` (
 
 LOCK TABLES `Student` WRITE;
 /*!40000 ALTER TABLE `Student` DISABLE KEYS */;
-INSERT INTO `Student` VALUES (1,'Вагнер','Артур','Александрович',1,1,1111),(2,'Писаренко ','Степан','',2,1,1121);
+INSERT INTO `Student` VALUES (1,'Smovjenko','Alixei','Leonidovich',1,1111),(2,'Wagner','Arthur','Alexandrovich',2,1111),(3,'Kalitovskiy','Bohdan','Vitaliyovuch',3,1121),(4,'Kovalenko','Stanislav','Igorovuch',4,1121),(5,'Krasnuk','Igor','Stanislavovich',5,1312);
 /*!40000 ALTER TABLE `Student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -285,9 +282,12 @@ CREATE TABLE `Subject` (
   `Name` varchar(45) NOT NULL,
   `idTeacher_fk` int(11) NOT NULL,
   `idRequirementsSubject_fk` int(11) NOT NULL,
+  `idGroup_fk` int(11) DEFAULT NULL,
   PRIMARY KEY (`idSubject`),
   KEY `fk_Subject_Teacher_fk_idx` (`idTeacher_fk`),
   KEY `fk_Subject_Requirements_idx` (`idRequirementsSubject_fk`),
+  KEY `fk_Subject_Group_idx` (`idGroup_fk`),
+  CONSTRAINT `fk_Subject_Group` FOREIGN KEY (`idGroup_fk`) REFERENCES `GroupT` (`idGroup`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_Subject_Requirements` FOREIGN KEY (`idRequirementsSubject_fk`) REFERENCES `RequirementsSubject` (`idRequirementsSubject`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_Subject_Teacher_fk` FOREIGN KEY (`idTeacher_fk`) REFERENCES `Teacher` (`idTeacher`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -299,7 +299,7 @@ CREATE TABLE `Subject` (
 
 LOCK TABLES `Subject` WRITE;
 /*!40000 ALTER TABLE `Subject` DISABLE KEYS */;
-INSERT INTO `Subject` VALUES (100011,'English',1,1),(100024,'CAD/CAM',4,1),(100035,'Information security',5,1),(100058,'C++',8,1),(200012,'English',2,1),(200057,'C++',7,1),(300013,'English',3,1),(300046,'Physics',6,1);
+INSERT INTO `Subject` VALUES (100011,'English',1,1,NULL),(100024,'CAD/CAM',4,2,NULL),(100035,'Information security',5,3,NULL),(100058,'C++',8,4,NULL),(200012,'English',2,2,NULL),(200057,'C++',7,3,NULL),(300013,'English',3,4,NULL),(300046,'Physics',6,1,NULL);
 /*!40000 ALTER TABLE `Subject` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -325,7 +325,7 @@ CREATE TABLE `Teacher` (
 
 LOCK TABLES `Teacher` WRITE;
 /*!40000 ALTER TABLE `Teacher` DISABLE KEYS */;
-INSERT INTO `Teacher` VALUES (1,'Ivanova','L',NULL),(2,'Stepanove','O',NULL),(3,'Talakov','V',NULL),(4,'Sidorov','M',NULL),(5,'Validov','R',NULL),(6,'Varlam','T',NULL),(7,'Gerund','U',NULL),(8,'Kaban','E',NULL);
+INSERT INTO `Teacher` VALUES (1,'Ivanova','Lina','Semenovna'),(2,'Stepanove','Oleg','Alexeevich'),(3,'Talakov','Viktor','Igorevich'),(4,'Sidorov','Mihail','Artutovich'),(5,'Validov','Ruslan','Andreevich'),(6,'Varlam','Tandur','Mamedovich'),(7,'Gerund','Uriy','Antonovich'),(8,'Kaban','Elena','Sergeevna');
 /*!40000 ALTER TABLE `Teacher` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -346,4 +346,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-01-10 13:50:16
+-- Dump completed on 2017-01-11 16:49:47
