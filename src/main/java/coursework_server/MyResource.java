@@ -36,9 +36,39 @@ public class MyResource {
     @GET
     @Path("groups/getall")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response getGroups(@Context UriInfo info){
+    public Response getAllGroups(@Context UriInfo info){
         DBWorker worker=new DBWorker();
         List<Group> list=worker.getAllGroups();
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("subjects/getall")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getAllSubjects(@Context UriInfo info){
+        DBWorker worker=new DBWorker();
+        List<Subject> list=worker.getAllSubjects();
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("cafedras/getall")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getAllCafedras(@Context UriInfo info){
+        DBWorker worker=new DBWorker();
+        List<Cafedra> list=worker.getAllCafedras();
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("specialitites/getall")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getAllSpecialitites(@Context UriInfo info){
+        DBWorker worker=new DBWorker();
+        List<Speciality> list=worker.getAllSpecialitites();
         worker.closeConnection();
         return sendList(list);
     }

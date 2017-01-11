@@ -71,4 +71,67 @@ public class DBWorker {
         }
     }
 
+    public List<Subject> getAllSubjects(){
+        try{
+            Statement statement=connection.createStatement();
+            ResultSet set=statement.executeQuery("select idSubject,subject.Name,subject.idTeacher_fk,teacher.SurName,teacher.Name,teacher.Patronymic from subject\n" +
+                    "join teacher on idTeacher_fk=teacher.idTeacher");
+            List<Subject> subjects=new ArrayList<>();
+            while (set.next()){
+                Subject subject=new Subject();
+                subject.setId(set.getInt("idSubject"));
+                subject.setTeacherId(set.getInt("idTeacher_fk"));
+                subject.setSubjectName(set.getString("subject.Name"));
+                subject.setSurname(set.getString("teacher.SurName"));
+                subject.setName(set.getString("teacher.Name"));
+                subject.setPatronymic("teacher.Patronymic");
+                subjects.add(subject);
+            }
+            return subjects;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public List<Cafedra> getAllCafedras(){
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet set=statement.executeQuery("SELECT idCafedra,cafedra.Name,idFaculty_fk,faculty.Name FROM courseworkschema.cafedra\n" +
+                    "JOIN faculty ON cafedra.idFaculty_fk=faculty.idFaculty");
+            List<Cafedra> cafedras=new ArrayList<>();
+            while (set.next()){
+                Cafedra cafedra=new Cafedra();
+                cafedra.setId(set.getInt("idCafedra"));
+                cafedra.setFacultyId(set.getInt("idFaculty_fk"));
+                cafedra.setName(set.getString("cafedra.Name"));
+                cafedra.setFacultyName("faculty.Name");
+                cafedras.add(cafedra);
+            }
+            return cafedras;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public List<Speciality> getAllSpecialitites(){
+        try{
+            Statement statement=connection.createStatement();
+            ResultSet set=statement.executeQuery("SELECT speciality.idSpeciality,speciality.Name,speciality.idCafedra_fk,cafedra.Name\n" +
+                    "FROM speciality\n" +
+                    "JOIN cafedra ON cafedra.idCafedra=speciality.idCafedra_fk");
+            List<Speciality> specialities=new ArrayList<>();
+            while (set.next()){
+                Speciality speciality=new Speciality();
+                speciality.setId(set.getInt("speciality.idSpeciality"));
+                speciality.setName(set.getString("speciality.Name"));
+                speciality.setCafedraId(set.getInt("speciality.idCafedra_fk"));
+                speciality.setCafedraName(set.getString("cafedra.Name"));
+                specialities.add(speciality);
+            }
+            return specialities;
+        } catch (SQLException e) {
+           return null;
+        }
+    }
+
 }
