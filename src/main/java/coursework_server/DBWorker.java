@@ -50,4 +50,25 @@ public class DBWorker {
         }
     }
 
+    public List<Group> getAllGroups(){
+        try{
+            Statement statement=connection.createStatement();
+            ResultSet set=statement.executeQuery("SELECT idGroup,groupt.Name,idSpeciality_fk,speciality.Name AS spec_name FROM groupt\n" +
+                    "JOIN speciality ON groupt.idSpeciality_fk=speciality.idSpeciality");
+            List<Group> groups=new ArrayList<>();
+            while (set.next()){
+                Group group=new Group();
+                group.setId(set.getInt("idGroup"));
+                group.setName(set.getString("Name"));
+                group.setSpecialityId(set.getInt("idSpeciality_fk"));
+                group.setSpecilaityName(set.getString("spec_name"));
+                groups.add(group);
+            }
+            return groups;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
 }

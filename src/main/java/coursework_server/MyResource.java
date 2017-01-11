@@ -5,8 +5,10 @@ import com.google.gson.Gson;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
 import java.util.List;
 
 /**
@@ -28,12 +30,25 @@ public class MyResource {
         DBWorker worker=new DBWorker();
         List<Faculty> list=worker.getFaculties();
         worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("groups/getall")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getGroups(@Context UriInfo info){
+        DBWorker worker=new DBWorker();
+        List<Group> list=worker.getAllGroups();
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    private Response sendList(List list){
         if(list!=null){
             Gson gson=new Gson();
             String json=gson.toJson(list);
             return Response.status(200).entity(json).build();
-        }
-        else
+        } else
             return Response.status(400).build();
     }
 }
