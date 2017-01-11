@@ -44,6 +44,17 @@ public class MyResource {
     }
 
     @GET
+    @Path("groups/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getGroups(@Context UriInfo info){
+        int specialityId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Group> list=worker.getGroups(specialityId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
     @Path("subjects/getall")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getAllSubjects(@Context UriInfo info){
@@ -64,11 +75,33 @@ public class MyResource {
     }
 
     @GET
+    @Path("cafedras/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getCafedras(@Context UriInfo info){
+        int facultyId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Cafedra> list=worker.getCafedras(facultyId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
     @Path("specialitites/getall")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getAllSpecialitites(@Context UriInfo info){
         DBWorker worker=new DBWorker();
         List<Speciality> list=worker.getAllSpecialitites();
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("specialitites/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getSpecialitites(@Context UriInfo info){
+        int cafedraId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Speciality> list=worker.getSpecialitites(cafedraId);
         worker.closeConnection();
         return sendList(list);
     }
