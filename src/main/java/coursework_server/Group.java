@@ -6,8 +6,6 @@ package coursework_server;
 public class Group {
     private int id;
     private String name;
-    private int specialityId;
-    private String specilaityName;
 
     public Group() {
     }
@@ -28,19 +26,4 @@ public class Group {
         this.name = name;
     }
 
-    public int getSpecialityId() {
-        return specialityId;
-    }
-
-    public void setSpecialityId(int specialityId) {
-        this.specialityId = specialityId;
-    }
-
-    public String getSpecilaityName() {
-        return specilaityName;
-    }
-
-    public void setSpecilaityName(String specilaityName) {
-        this.specilaityName = specilaityName;
-    }
 }

@@ -5,9 +5,7 @@ package coursework_server;
  */
 public class Cafedra {
     private int id;
-    private int facultyId;
     private String name;
-    private String facultyName;
 
     public Cafedra() {
     }
@@ -20,14 +18,6 @@ public class Cafedra {
         this.id = id;
     }
 
-    public int getFacultyId() {
-        return facultyId;
-    }
-
-    public void setFacultyId(int facultyId) {
-        this.facultyId = facultyId;
-    }
-
     public String getName() {
         return name;
     }
@@ -35,12 +25,5 @@ public class Cafedra {
     public void setName(String name) {
         this.name = name;
     }
-
-    public String getFacultyName() {
-        return facultyName;
-    }
-
-    public void setFacultyName(String facultyName) {
-        this.facultyName = facultyName;
-    }
+    
 }

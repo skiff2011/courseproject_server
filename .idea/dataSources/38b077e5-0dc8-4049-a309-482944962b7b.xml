@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="courseworkschema@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="courseworkschema">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="project_db"/>
+    <schema id="7" parent="1" name="sakila"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="world"/>
+    <table id="10" parent="2" name="attestation"/>
+    <table id="11" parent="2" name="cafedra"/>
+    <table id="12" parent="2" name="faculty"/>
+    <table id="13" parent="2" name="groupsubject"/>
+    <table id="14" parent="2" name="groupt"/>
+    <table id="15" parent="2" name="loging"/>
+    <table id="16" parent="2" name="progressstudent"/>
+    <table id="17" parent="2" name="requirementssubject"/>
+    <table id="18" parent="2" name="speciality"/>
+    <table id="19" parent="2" name="student"/>
+    <table id="20" parent="2" name="subject"/>
+    <table id="21" parent="2" name="teacher"/>
+    <column id="22" parent="10" name="idAttestation">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="10" name="Status">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="24" parent="10" name="idStudent_fk">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="25" parent="10" name="idSubject_fk">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="26" parent="10" name="fk_Attestation_Student_idx">
+      <ColNames>idStudent_fk</ColNames>
+    </index>
+    <index id="27" parent="10" name="fk_Attestation_Subject_idx">
+      <ColNames>idSubject_fk</ColNames>
+    </index>
+    <key id="28" parent="10" name="PRIMARY">
+      <ColNames>idAttestation</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="29" parent="10" name="fk_Attestation_Student">
+      <ColNames>idStudent_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>student</RefTableName>
+      <RefColNames>idStudent</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="30" parent="10" name="fk_Attestation_Subject">
+      <ColNames>idSubject_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>subject</RefTableName>
+      <RefColNames>idSubject</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="31" parent="11" name="idCafedra">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="11" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="11" name="idFaculty_fk">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="34" parent="11" name="fk_Cafedra_Faculty_fk_idx">
+      <ColNames>idFaculty_fk</ColNames>
+    </index>
+    <index id="35" parent="11" name="Name_UNIQUE">
+      <ColNames>Name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="11" name="PRIMARY">
+      <ColNames>idCafedra</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="37" parent="11" name="Name_UNIQUE">
+      <ColNames>Name</ColNames>
+      <UnderlyingIndexName>Name_UNIQUE</UnderlyingIndexName>
+    </key>
+    <foreign-key id="38" parent="11" name="fk_Cafedra_Faculty_fk">
+      <ColNames>idFaculty_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>faculty</RefTableName>
+      <RefColNames>idFaculty</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="39" parent="12" name="idFaculty">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="12" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="41" parent="12" name="Name_UNIQUE">
+      <ColNames>Name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="12" name="PRIMARY">
+      <ColNames>idFaculty</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="43" parent="12" name="Name_UNIQUE">
+      <ColNames>Name</ColNames>
+      <UnderlyingIndexName>Name_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="44" parent="13" name="idGroupSubject">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="13" name="idSubject">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="13" name="idGroup">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="47" parent="13" name="fk_GroupSubject_Group_idx">
+      <ColNames>idGroup</ColNames>
+    </index>
+    <index id="48" parent="13" name="fk_GroupSubject_Subject_idx">
+      <ColNames>idSubject</ColNames>
+    </index>
+    <key id="49" parent="13" name="PRIMARY">
+      <ColNames>idGroupSubject</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="50" parent="13" name="fk_GroupSubject_Subject">
+      <ColNames>idSubject</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>subject</RefTableName>
+      <RefColNames>idSubject</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="51" parent="13" name="fk_GroupSubject_Group">
+      <ColNames>idGroup</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>groupt</RefTableName>
+      <RefColNames>idGroup</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="52" parent="14" name="idGroup">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="14" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="14" name="idSpeciality_fk">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="55" parent="14" name="fk_GroupT_Speciality_fk_idx">
+      <ColNames>idSpeciality_fk</ColNames>
+    </index>
+    <index id="56" parent="14" name="Name_UNIQUE">
+      <ColNames>Name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="14" name="PRIMARY">
+      <ColNames>idGroup</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="58" parent="14" name="Name_UNIQUE">
+      <ColNames>Name</ColNames>
+      <UnderlyingIndexName>Name_UNIQUE</UnderlyingIndexName>
+    </key>
+    <foreign-key id="59" parent="14" name="fk_GroupT_Speciality_fk">
+      <ColNames>idSpeciality_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>speciality</RefTableName>
+      <RefColNames>idSpeciality</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="60" parent="15" name="idLoging">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="15" name="User">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="15" name="password">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="63" parent="15" name="password_UNIQUE">
+      <ColNames>password</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="64" parent="15" name="User_UNIQUE">
+      <ColNames>User</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="15" name="PRIMARY">
+      <ColNames>idLoging</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="66" parent="15" name="User_UNIQUE">
+      <ColNames>User</ColNames>
+      <UnderlyingIndexName>User_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="67" parent="15" name="password_UNIQUE">
+      <ColNames>password</ColNames>
+      <UnderlyingIndexName>password_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="68" parent="16" name="idProgressStudent">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="16" name="Marks">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="16" name="Works">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="16" name="Lections">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="16" name="idSubject_fk">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="73" parent="16" name="fk_ProgressStudent_Subject_fk_idx">
+      <ColNames>idSubject_fk</ColNames>
+    </index>
+    <key id="74" parent="16" name="PRIMARY">
+      <ColNames>idProgressStudent</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="75" parent="16" name="fk_ProgressStudent_Subject_id">
+      <ColNames>idSubject_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>subject</RefTableName>
+      <RefColNames>idSubject</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="76" parent="17" name="idRequirementsSubject">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="17" name="Marks">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="17" name="Works">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="17" name="Lections">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="80" parent="17" name="PRIMARY">
+      <ColNames>idRequirementsSubject</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="81" parent="18" name="idSpeciality">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="18" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="18" name="idCafedra_fk">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="84" parent="18" name="fk_Speciality_Cafedra_fk_idx">
+      <ColNames>idCafedra_fk</ColNames>
+    </index>
+    <index id="85" parent="18" name="Name_UNIQUE">
+      <ColNames>Name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="86" parent="18" name="PRIMARY">
+      <ColNames>idSpeciality</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="87" parent="18" name="Name_UNIQUE">
+      <ColNames>Name</ColNames>
+      <UnderlyingIndexName>Name_UNIQUE</UnderlyingIndexName>
+    </key>
+    <foreign-key id="88" parent="18" name="fk_Speciality_Cafedra_fk">
+      <ColNames>idCafedra_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>cafedra</RefTableName>
+      <RefColNames>idCafedra</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="89" parent="19" name="idStudent">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="19" name="Surname">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="91" parent="19" name="Name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="92" parent="19" name="Patronymic">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="93" parent="19" name="idProgressStudent_fk">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="94" parent="19" name="idGroup_fk">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="95" parent="19" name="fk_Student_Group_idx">
+      <ColNames>idGroup_fk</ColNames>
+    </index>
+    <index id="96" parent="19" name="fk_Student_Progress_idx">
+      <ColNames>idProgressStudent_fk</ColNames>
+    </index>
+    <key id="97" parent="19" name="PRIMARY">
+      <ColNames>idStudent</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="98" parent="19" name="fk_Student_Progress">
+      <ColNames>idProgressStudent_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>progressstudent</RefTableName>
+      <RefColNames>idProgressStudent</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="99" parent="19" name="fk_Student_Group">
+      <ColNames>idGroup_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>groupt</RefTableName>
+      <RefColNames>idGroup</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="100" parent="20" name="idSubject">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="20" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="20" name="idTeacher_fk">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="20" name="idRequirementsSubject_fk">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="104" parent="20" name="fk_Subject_Requirements_idx">
+      <ColNames>idRequirementsSubject_fk</ColNames>
+    </index>
+    <index id="105" parent="20" name="fk_Subject_Teacher_fk_idx">
+      <ColNames>idTeacher_fk</ColNames>
+    </index>
+    <key id="106" parent="20" name="PRIMARY">
+      <ColNames>idSubject</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="107" parent="20" name="fk_Subject_Teacher_fk">
+      <ColNames>idTeacher_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>idTeacher</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="108" parent="20" name="fk_Subject_Requirements">
+      <ColNames>idRequirementsSubject_fk</ColNames>
+      <RefSchemaName>courseworkschema</RefSchemaName>
+      <RefTableName>requirementssubject</RefTableName>
+      <RefColNames>idRequirementsSubject</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="109" parent="21" name="idTeacher">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="21" name="Surname">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="21" name="Name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="112" parent="21" name="Patronymic">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="113" parent="21" name="PRIMARY">
+      <ColNames>idTeacher</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,14 +1,13 @@
 package coursework_server;
 
 import com.google.gson.Gson;
+import org.eclipse.persistence.oxm.JSONWithPadding;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.*;
 import java.util.List;
 
 /**
@@ -25,12 +24,12 @@ public class MyResource {
      */
     @GET
     @Path("faculties/getall")
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<Faculty> getAllFaculties() {
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getAllFaculties(@QueryParam("callback") String callback) {
         DBWorker worker=new DBWorker();
         List<Faculty> list=worker.getFaculties();
         worker.closeConnection();
-        return list;
+        return sendList(list);
     }
 
     @GET
@@ -44,12 +43,34 @@ public class MyResource {
     }
 
     @GET
-    @Path("groups/get")
+    @Path("groups/byfacid/get")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response getGroups(@Context UriInfo info){
+    public Response getGroupsByFacId(@Context UriInfo info){
+        int facultyId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Group> list=worker.getGroupsByFacId(facultyId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("groups/bycafid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getGroupsByCafId(@Context UriInfo info){
+        int cafedraId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Group> list=worker.getGroupsByCafId(cafedraId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("groups/byspecid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getGroupsBySpecId(@Context UriInfo info){
         int specialityId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
         DBWorker worker=new DBWorker();
-        List<Group> list=worker.getGroups(specialityId);
+        List<Group> list=worker.getGroupsBySpecId(specialityId);
         worker.closeConnection();
         return sendList(list);
     }
@@ -65,6 +86,17 @@ public class MyResource {
     }
 
     @GET
+    @Path("subjects/byfacid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getSubjectsByFacId(@Context UriInfo info){
+        int facultyId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Subject> list=worker.getAllSubjectsByFacId(facultyId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
     @Path("cafedras/getall")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getAllCafedras(@Context UriInfo info){
@@ -75,12 +107,12 @@ public class MyResource {
     }
 
     @GET
-    @Path("cafedras/get")
+    @Path("cafedras/byfacid/get")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response getCafedras(@Context UriInfo info){
+    public Response getCafedrasbyFacId(@Context UriInfo info){
         int facultyId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
         DBWorker worker=new DBWorker();
-        List<Cafedra> list=worker.getCafedras(facultyId);
+        List<Cafedra> list=worker.getCafedrasbyFacId(facultyId);
         worker.closeConnection();
         return sendList(list);
     }
@@ -96,7 +128,7 @@ public class MyResource {
     }
 
     @GET
-    @Path("specialitites/get")
+    @Path("specialitites/bycafid/get")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getSpecialitites(@Context UriInfo info){
         int cafedraId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
@@ -110,8 +142,13 @@ public class MyResource {
         if(list!=null){
             Gson gson=new Gson();
             String json=gson.toJson(list);
-            return Response.status(200).entity(json).build();
+            return Response.status(200).entity(json)
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .allow("OPTIONS").build();
         } else
-            return Response.status(400).build();
+            return Response.status(400).header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .allow("OPTIONS").build();
     }
 }

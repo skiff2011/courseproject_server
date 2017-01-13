@@ -101,6 +101,35 @@ INSERT INTO `Faculty` VALUES (1000,'FICT'),(3000,'FRE'),(2000,'IASA');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `GroupSubject`
+--
+
+DROP TABLE IF EXISTS `GroupSubject`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `GroupSubject` (
+  `idGroupSubject` int(11) NOT NULL,
+  `idSubject` int(11) NOT NULL,
+  `idGroup` int(11) NOT NULL,
+  PRIMARY KEY (`idGroupSubject`),
+  KEY `fk_GroupSubject_Group_idx` (`idGroup`),
+  KEY `fk_GroupSubject_Subject_idx` (`idSubject`),
+  CONSTRAINT `fk_GroupSubject_Group` FOREIGN KEY (`idGroup`) REFERENCES `GroupT` (`idGroup`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_GroupSubject_Subject` FOREIGN KEY (`idSubject`) REFERENCES `Subject` (`idSubject`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `GroupSubject`
+--
+
+LOCK TABLES `GroupSubject` WRITE;
+/*!40000 ALTER TABLE `GroupSubject` DISABLE KEYS */;
+INSERT INTO `GroupSubject` VALUES (1,100011,1111),(2,100011,1121),(3,100011,1211),(4,100011,1311),(5,100011,1312),(6,100011,1411),(7,100024,1111),(8,100024,1121),(9,100024,1211),(10,100024,1311),(11,100024,1312),(12,100024,1411),(13,100035,1121),(14,100035,1311),(15,100035,1312),(16,100035,1411),(17,100058,1411),(18,200012,2111),(19,200012,2121),(20,200012,2211),(21,200012,2221),(22,200057,2211),(23,200057,2221),(24,300013,3111),(25,300013,3211),(26,300013,3311),(27,300013,3321),(28,300046,3311),(29,300046,3321);
+/*!40000 ALTER TABLE `GroupSubject` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `GroupT`
 --
 
@@ -282,12 +311,9 @@ CREATE TABLE `Subject` (
   `Name` varchar(45) NOT NULL,
   `idTeacher_fk` int(11) NOT NULL,
   `idRequirementsSubject_fk` int(11) NOT NULL,
-  `idGroup_fk` int(11) DEFAULT NULL,
   PRIMARY KEY (`idSubject`),
   KEY `fk_Subject_Teacher_fk_idx` (`idTeacher_fk`),
   KEY `fk_Subject_Requirements_idx` (`idRequirementsSubject_fk`),
-  KEY `fk_Subject_Group_idx` (`idGroup_fk`),
-  CONSTRAINT `fk_Subject_Group` FOREIGN KEY (`idGroup_fk`) REFERENCES `GroupT` (`idGroup`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_Subject_Requirements` FOREIGN KEY (`idRequirementsSubject_fk`) REFERENCES `RequirementsSubject` (`idRequirementsSubject`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_Subject_Teacher_fk` FOREIGN KEY (`idTeacher_fk`) REFERENCES `Teacher` (`idTeacher`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -299,7 +325,7 @@ CREATE TABLE `Subject` (
 
 LOCK TABLES `Subject` WRITE;
 /*!40000 ALTER TABLE `Subject` DISABLE KEYS */;
-INSERT INTO `Subject` VALUES (100011,'English',1,1,NULL),(100024,'CAD/CAM',4,2,NULL),(100035,'Information security',5,3,NULL),(100058,'C++',8,4,NULL),(200012,'English',2,2,NULL),(200057,'C++',7,3,NULL),(300013,'English',3,4,NULL),(300046,'Physics',6,1,NULL);
+INSERT INTO `Subject` VALUES (100011,'English',1,1),(100024,'CAD/CAM',4,2),(100035,'Information security',5,3),(100058,'C++',8,4),(200012,'English',2,2),(200057,'C++',7,3),(300013,'English',3,4),(300046,'Physics',6,1);
 /*!40000 ALTER TABLE `Subject` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -325,7 +351,7 @@ CREATE TABLE `Teacher` (
 
 LOCK TABLES `Teacher` WRITE;
 /*!40000 ALTER TABLE `Teacher` DISABLE KEYS */;
-INSERT INTO `Teacher` VALUES (1,'Ivanova','Lina','Semenovna'),(2,'Stepanove','Oleg','Alexeevich'),(3,'Talakov','Viktor','Igorevich'),(4,'Sidorov','Mihail','Artutovich'),(5,'Validov','Ruslan','Andreevich'),(6,'Varlam','Tandur','Mamedovich'),(7,'Gerund','Uriy','Antonovich'),(8,'Kaban','Elena','Sergeevna');
+INSERT INTO `Teacher` VALUES (1,'Ivanova','Lina','Semenovna'),(2,'Stepanova','Olga','Alexeevna'),(3,'Talakov','Viktor','Igorevich'),(4,'Sidorov','Mihail','Artutovich'),(5,'Validov','Ruslan','Andreevich'),(6,'Varlam','Tandur','Mamedovich'),(7,'Gerund','Uriy','Antonovich'),(8,'Kaban','Elena','Sergeevna');
 /*!40000 ALTER TABLE `Teacher` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -346,4 +372,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-01-11 16:49:47
+-- Dump completed on 2017-01-13 17:59:53

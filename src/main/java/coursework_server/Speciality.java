@@ -5,18 +5,7 @@ package coursework_server;
  */
 public class Speciality {
     private int id;
-    private int cafedraId;
     private String name;
-
-    public String getCafedraName() {
-        return cafedraName;
-    }
-
-    public void setCafedraName(String cafedraName) {
-        this.cafedraName = cafedraName;
-    }
-
-    private String cafedraName;
 
     public Speciality() {
     }
@@ -29,13 +18,6 @@ public class Speciality {
         this.id = id;
     }
 
-    public int getCafedraId() {
-        return cafedraId;
-    }
-
-    public void setCafedraId(int cafedraId) {
-        this.cafedraId = cafedraId;
-    }
 
     public String getName() {
         return name;
