@@ -86,6 +86,16 @@ public class MyResource {
     }
 
     @GET
+    @Path("subjects/teacher/getall")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getAllSubjectsWithTeach(@Context UriInfo info){
+        DBWorker worker=new DBWorker();
+        List<SubjectWithTeachId> list=worker.getAllSubjectsWithTeachId();
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
     @Path("subjects/byfacid/get")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getSubjectsByFacId(@Context UriInfo info){

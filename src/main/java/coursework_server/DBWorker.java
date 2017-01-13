@@ -155,6 +155,24 @@ public class DBWorker {
         }
     }
 
+    public List<SubjectWithTeachId> getAllSubjectsWithTeachId(){
+        try{
+            Statement statement=connection.createStatement();
+            ResultSet set=statement.executeQuery("select subject.idSubject, subject.Name, subject.idTeacher_fk from subject");
+            List<SubjectWithTeachId> subjects=new ArrayList<>();
+            while (set.next()){
+                SubjectWithTeachId subject=new SubjectWithTeachId();
+                subject.setId(set.getInt("idSubject"));
+                subject.setName(set.getString("Name"));
+                subject.setTeacherId(set.getInt("idTeacher_fk"));
+                subjects.add(subject);
+            }
+            return subjects;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
     public List<Subject> getAllSubjectsByFacId(int facId){
         try{
             PreparedStatement statement=connection.prepareStatement("Select  subject.idSubject, subject.Name from subject\n" +
