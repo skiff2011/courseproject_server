@@ -33,6 +33,17 @@ public class MyResource {
     }
 
     @GET
+    @Path("faculties/bygroupid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getFacultiesByGroupId(@Context UriInfo info){
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Faculty> list=worker.getFacultiesByGroupId(groupId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
     @Path("groups/getall")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getAllGroups(@Context UriInfo info){
@@ -107,6 +118,17 @@ public class MyResource {
     }
 
     @GET
+    @Path("subjects/bygroupid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getSubjectsByGroupId(@Context UriInfo info){
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Subject> list=worker.getAllSubjectsByGroupId(groupId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
     @Path("cafedras/getall")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getAllCafedras(@Context UriInfo info){
@@ -128,6 +150,17 @@ public class MyResource {
     }
 
     @GET
+    @Path("cafedras/bygroupid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getCafedrasbygroupId(@Context UriInfo info){
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Cafedra> list=worker.getCafedrasbyGroupId(groupId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
     @Path("specialitites/getall")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getAllSpecialitites(@Context UriInfo info){
@@ -144,6 +177,17 @@ public class MyResource {
         int cafedraId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
         DBWorker worker=new DBWorker();
         List<Speciality> list=worker.getSpecialitites(cafedraId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("specialitites/bygroupid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getSpecialititesByGroupId(@Context UriInfo info){
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Speciality> list=worker.getSpecialititesByGroupId(groupId);
         worker.closeConnection();
         return sendList(list);
     }

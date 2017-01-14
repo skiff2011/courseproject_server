@@ -50,6 +50,29 @@ public class DBWorker {
         }
     }
 
+    public List<Faculty> getFacultiesByGroupId(int groupid){
+        try {
+            PreparedStatement statement=connection.prepareStatement("SELECT faculty.idFaculty, faculty.Name FROM faculty \n" +
+                    "JOIN cafedra ON cafedra.idFaculty_fk = faculty.idFaculty\n" +
+                    "JOIN speciality ON Speciality.idCafedra_fk = cafedra.idCafedra\n" +
+                    "JOIN groupt ON GroupT.idSpeciality_fk = speciality.idSpeciality\n" +
+                    "WHERE groupt.idGroup = ?");
+            statement.setInt(1,groupid);
+            List<Faculty> faculties=new ArrayList<>();
+            ResultSet set=statement.executeQuery();
+            while (set.next()){
+                Faculty faculty=new Faculty();
+                faculty.setId(set.getInt("idFaculty"));
+                faculty.setName(set.getString("faculty.Name"));
+                faculties.add(faculty);
+            }
+            return faculties;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
     public List<Group> getAllGroups(){
         try{
             Statement statement=connection.createStatement();
@@ -173,7 +196,7 @@ public class DBWorker {
         }
     }
 
-    public List<Subject> getAllSubjectsByFacId(int facId){
+       public List<Subject> getAllSubjectsByFacId(int facId){
         try{
             PreparedStatement statement=connection.prepareStatement("Select  subject.idSubject, subject.Name from subject\n" +
                     "join groupSubject on groupsubject.idSubject = subject.idSubject\n" +
@@ -184,6 +207,27 @@ public class DBWorker {
                     "where idFaculty = ?\n" +
                     "group by subject.idSubject");
             statement.setInt(1,facId);
+            ResultSet set=statement.executeQuery();
+            List<Subject> subjects=new ArrayList<>();
+            while (set.next()){
+                Subject subject=new Subject();
+                subject.setId(set.getInt("idSubject"));
+                subject.setName(set.getString("Name"));
+                subjects.add(subject);
+            }
+            return subjects;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public List<Subject> getAllSubjectsByGroupId(int groupId){
+        try{
+            PreparedStatement statement=connection.prepareStatement("select subject.idSubject, Subject.Name from Subject \n" +
+                    "join GroupSubject on GroupSubject.idSubject = Subject.idSubject\n" +
+                    "join GroupT on GroupSubject.idGroup = GroupT.idGroup\n" +
+                    "where GroupT.idGroup = ?");
+            statement.setInt(1,groupId);
             ResultSet set=statement.executeQuery();
             List<Subject> subjects=new ArrayList<>();
             while (set.next()){
@@ -235,6 +279,27 @@ public class DBWorker {
         }
     }
 
+    public List<Cafedra> getCafedrasbyGroupId(int groupId){
+        try {
+            PreparedStatement statement=connection.prepareStatement("SELECT Cafedra.idCafedra, Cafedra.Name FROM Cafedra \n" +
+                    "JOIN Speciality ON Speciality.idCafedra_fk = Cafedra.idCafedra\n" +
+                    "JOIN GroupT ON GroupT.idSpeciality_fk = Speciality.idSpeciality\n" +
+                    "WHERE GroupT.idGroup = ?");
+            statement.setInt(1,groupId);
+            List<Cafedra> cafedras=new ArrayList<>();
+            ResultSet resultSet=statement.executeQuery();
+            while (resultSet.next()){
+                Cafedra cafedra=new Cafedra();
+                cafedra.setId(resultSet.getInt("idCafedra"));
+                cafedra.setName(resultSet.getString("cafedra.Name"));
+                cafedras.add(cafedra);
+            }
+            return cafedras;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
     public List<Speciality> getAllSpecialitites(){
         try{
             Statement statement=connection.createStatement();
@@ -266,6 +331,26 @@ public class DBWorker {
                 Speciality speciality=new Speciality();
                 speciality.setId(set.getInt("idSpeciality"));
                 speciality.setName(set.getString("speciality.Name"));
+                specialities.add(speciality);
+            }
+            return specialities;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public List<Speciality> getSpecialititesByGroupId(int groupId){
+        try{
+            PreparedStatement statement=connection.prepareStatement("select Speciality.idSpeciality, Speciality.Name from Speciality \n" +
+                    "join GroupT on GroupT.idSpeciality_fk = Speciality.idSpeciality\n" +
+                    "where GroupT.idGroup = ?");
+            statement.setInt(1,groupId);
+            List<Speciality> specialities=new ArrayList<>();
+            ResultSet set=statement.executeQuery();
+            while (set.next()){
+                Speciality speciality=new Speciality();
+                speciality.setId(set.getInt("idSpeciality"));
+                speciality.setName(set.getString("Speciality.Name"));
                 specialities.add(speciality);
             }
             return specialities;
