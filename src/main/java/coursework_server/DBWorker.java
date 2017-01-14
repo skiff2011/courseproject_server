@@ -359,4 +359,77 @@ public class DBWorker {
         }
     }
 
+    public List<Teacher> getTeachersBySubName(String subName){
+        try{
+            PreparedStatement statement=connection.prepareStatement("SELECT teacher.idTeacher,teacher.Surname,teacher.Name,teacher.Patronymic FROM teacher\n" +
+                    "JOIN subject ON subject.idTeacher_fk=teacher.idTeacher\n" +
+                    "WHERE subject.Name LIKE ?");
+            statement.setString(1,subName);
+            List<Teacher> teachers=new ArrayList<>();
+            ResultSet set=statement.executeQuery();
+            while (set.next()){
+                Teacher teacher=new Teacher();
+                teacher.setId(set.getInt("teacher.idTeacher"));
+                teacher.setSurname(set.getString("teacher.Surname"));
+                teacher.setName(set.getString("teacher.Name"));
+                teacher.setPatronymic(set.getString("teacher.Patronymic"));
+                teachers.add(teacher);
+            }
+            return teachers;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public List<Teacher> getTeachersBySubNameAndFacId(String subName,int facultyId){
+        try{
+            PreparedStatement statement=connection.prepareStatement("select distinct teacher.idTeacher,teacher.Surname,teacher.Name,teacher.Patronymic from teacher\n" +
+                    "join subject on subject.idTeacher_fk=teacher.idTeacher\n" +
+                    "join groupsubject on groupsubject.idSubject=subject.idSubject\n" +
+                    "join groupt on groupt.idGroup=groupsubject.idGroup\n" +
+                    "join speciality on groupt.idSpeciality_fk=speciality.idSpeciality\n" +
+                    "join cafedra on speciality.idCafedra_fk=cafedra.idCafedra\n" +
+                    "where subject.Name like ? and cafedra.idFaculty_fk=?");
+            statement.setString(1,subName);
+            statement.setInt(2,facultyId);
+            List<Teacher> teachers=new ArrayList<>();
+            ResultSet set=statement.executeQuery();
+            while (set.next()){
+                Teacher teacher=new Teacher();
+                teacher.setId(set.getInt("teacher.idTeacher"));
+                teacher.setSurname(set.getString("teacher.Surname"));
+                teacher.setName(set.getString("teacher.Name"));
+                teacher.setPatronymic(set.getString("teacher.Patronymic"));
+                teachers.add(teacher);
+            }
+            return teachers;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public List<Teacher> getTeachersBySubNameAndGroupId(String subName,int groupId){
+        try{
+            PreparedStatement statement=connection.prepareStatement("select distinct teacher.idTeacher,teacher.Surname,teacher.Name,teacher.Patronymic from teacher\n" +
+                    "join subject on subject.idTeacher_fk=teacher.idTeacher\n" +
+                    "join groupsubject on groupsubject.idSubject=subject.idSubject\n" +
+                    "where subject.Name like ? and groupsubject.idGroup=?");
+            statement.setString(1,subName);
+            statement.setInt(2,groupId);
+            List<Teacher> teachers=new ArrayList<>();
+            ResultSet set=statement.executeQuery();
+            while (set.next()){
+                Teacher teacher=new Teacher();
+                teacher.setId(set.getInt("teacher.idTeacher"));
+                teacher.setSurname(set.getString("teacher.Surname"));
+                teacher.setName(set.getString("teacher.Name"));
+                teacher.setPatronymic(set.getString("teacher.Patronymic"));
+                teachers.add(teacher);
+            }
+            return teachers;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
 }

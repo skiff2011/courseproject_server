@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -190,6 +191,40 @@ public class MyResource {
         List<Speciality> list=worker.getSpecialititesByGroupId(groupId);
         worker.closeConnection();
         return sendList(list);
+    }
+
+    @GET
+    @Path("teachers/bysubname/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getTeachersBySubName(@Context UriInfo info){
+        String subName=info.getQueryParameters().getFirst("subname");
+        DBWorker worker=new DBWorker();
+        List<Teacher> list=worker.getTeachersBySubName(subName);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("teachers/bysubnameandfacid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getTeachersBySubNameAndFacId(@Context UriInfo info){
+        String subName=info.getQueryParameters().getFirst("name");
+        int facultyId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Teacher> list=worker.getTeachersBySubNameAndFacId(subName,facultyId);
+        worker.closeConnection();
+        return  sendList(list);
+    }
+    @GET
+    @Path("teachers/bysubnameandgroupid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getTeachersBySubNameAndGroupId(@Context UriInfo info){
+        String subName=info.getQueryParameters().getFirst("name");
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Teacher> list=worker.getTeachersBySubNameAndGroupId(subName,groupId);
+        worker.closeConnection();
+        return  sendList(list);
     }
 
     private Response sendList(List list){
