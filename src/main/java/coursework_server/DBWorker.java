@@ -541,7 +541,8 @@ public class DBWorker {
                     student.setAttest2("");
                 else
                     student.setAttest2(set.getString("AttestationTwo.Status"));
-                students.add(student);
+                if(!students.contains(student))
+                    students.add(student);
             }
             return students;
         } catch (SQLException e) {
@@ -549,5 +550,11 @@ public class DBWorker {
             return null;
         }
     }
-
+    public void putAttest(int subId, int groupId,int marks,int lection,int works,int attest){
+            List<Student> list=getStudentsBySubAndGroup(subId,groupId);
+            for (Student student:list) {
+                student.putAttest(marks, lection, works, attest,connection,subId);
+                System.out.println(student.toString());
+            }
+    }
 }

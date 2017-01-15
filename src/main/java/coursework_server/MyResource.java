@@ -3,10 +3,7 @@ package coursework_server;
 import com.google.gson.Gson;
 import org.eclipse.persistence.oxm.JSONWithPadding;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -270,6 +267,25 @@ public class MyResource {
         List<Student> list=worker.getStudentsBySubAndGroup(subId,groupId);
         worker.closeConnection();
         return sendList(list);
+    }
+
+    @PUT
+    @Path("students/putattest")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response putAttest(@Context UriInfo info){
+        int attest=Integer.parseInt(info.getQueryParameters().getFirst("attest"));
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("idG"));
+        int subId=Integer.parseInt(info.getQueryParameters().getFirst("idS"));
+        int marks=Integer.parseInt(info.getQueryParameters().getFirst("marks"));
+        int lection=Integer.parseInt(info.getQueryParameters().getFirst("lections"));
+        int works=Integer.parseInt(info.getQueryParameters().getFirst("works"));
+        DBWorker worker=new DBWorker();
+        worker.putAttest(subId,groupId,marks,lection,works,attest);
+        worker.closeConnection();
+        return Response.status(200)
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS").build();
     }
 
     private Response sendList(List list){
