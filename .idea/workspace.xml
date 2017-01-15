@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95c69e55-a6a2-474b-8eed-0aa17dd2e72d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/coursework_server/Teacher.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/97b45410-0aae-4917-b6f3-40da92b15e74.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/coursework_server/SubjectWithTeacher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/coursework_server/DBWorker.class" afterPath="$PROJECT_DIR$/target/classes/coursework_server/DBWorker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/coursework_server/MyResource.class" afterPath="$PROJECT_DIR$/target/classes/coursework_server/MyResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/coursework_server/WEB-INF/classes/coursework_server/DBWorker.class" afterPath="$PROJECT_DIR$/target/coursework_server/WEB-INF/classes/coursework_server/DBWorker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/coursework_server/WEB-INF/classes/coursework_server/MyResource.class" afterPath="$PROJECT_DIR$/target/coursework_server/WEB-INF/classes/coursework_server/MyResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java" afterPath="$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java" afterPath="$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java" />
@@ -34,8 +37,8 @@
       <file leaf-file-name="MyResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="224" column="43" lean-forward="true" selection-start-line="224" selection-start-column="43" selection-end-line="224" selection-end-column="43" />
+            <state relative-caret-position="188">
+              <caret line="110" column="41" lean-forward="false" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -44,34 +47,48 @@
       <file leaf-file-name="DBWorker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="415" column="46" lean-forward="false" selection-start-line="415" selection-start-column="46" selection-end-line="415" selection-end-column="46" />
+            <state relative-caret-position="273">
+              <caret line="221" column="45" lean-forward="false" selection-start-line="221" selection-start-column="45" selection-end-line="221" selection-end-column="45" />
               <folding>
-                <marker date="1484364457426" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
-                <marker date="1484364457426" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
-                <marker date="1484364457426" expanded="true" signature="2838:2910" ph="Select group... groupT" />
-                <marker date="1484364457426" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
-                <marker date="1484364457426" expanded="true" signature="4558:4883" ph="select group... groupt" />
-                <marker date="1484364457426" expanded="true" signature="5554:5796" ph="select group... groupt" />
-                <marker date="1484364457426" expanded="true" signature="6496:6680" ph="select idSub... subject" />
-                <marker date="1484364457426" expanded="true" signature="7278:7351" ph="select idSub... subject" />
-                <marker date="1484364457426" expanded="true" signature="8002:8585" ph="Select subje... subject" />
-                <marker date="1484364457426" expanded="true" signature="9229:9500" ph="Select subje... subject" />
-                <marker date="1484364457426" expanded="true" signature="9229:9501" ph="select subje... Subject" />
-                <marker date="1484364457426" expanded="true" signature="10172:10338" ph="SELECT idCaf... cafedra" />
-                <marker date="1484364457426" expanded="true" signature="10897:10951" ph="select * fro... cafedra" />
-                <marker date="1484364457426" expanded="true" signature="11629:11909" ph="select * fro... cafedra" />
-                <marker date="1484364457426" expanded="true" signature="11629:11911" ph="SELECT Cafed... Cafedra" />
-                <marker date="1484364457426" expanded="true" signature="12620:12829" ph="SELECT speci... speciality" />
-                <marker date="1484364457426" expanded="true" signature="13437:13640" ph="select speci... speciality" />
-                <marker date="1484364457426" expanded="true" signature="14340:14544" ph="select speci... speciality" />
-                <marker date="1484364457426" expanded="true" signature="14340:14545" ph="select Speci... Speciality" />
-                <marker date="1484364457426" expanded="true" signature="15238:15456" ph="SELECT teach... teacher" />
-                <marker date="1484364457426" expanded="true" signature="16289:16883" ph="SELECT teach... teacher" />
-                <marker date="1484364457426" expanded="true" signature="16289:16884" ph="select disti... teacher" />
-                <marker date="1484364457426" expanded="true" signature="17760:18101" ph="select disti... teacher" />
-                <marker date="1484364457426" expanded="true" signature="17760:18102" ph="select disti... teacher" />
+                <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+                <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+                <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+                <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+                <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+                <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+                <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+                <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+                <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+                <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+                <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+                <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+                <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+                <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+                <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+                <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+                <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+                <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+                <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+                <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+                <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+                <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+                <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+                <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+                <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+                <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+                <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+                <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Subject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Subject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,6 +122,7 @@
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/Subject.java" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/SubjectWithTeachId.java" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/coursework_server/SubjectWithTeacher.java" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java" />
       </list>
@@ -144,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -203,7 +222,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -700,15 +718,18 @@
       <workItem from="1484184492445" duration="1060000" />
       <workItem from="1484344990387" duration="7476000" />
       <workItem from="1484361937326" duration="2822000" />
+      <workItem from="1484365290998" duration="12000" />
+      <workItem from="1484469240430" duration="32000" />
+      <workItem from="1484482267154" duration="2409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26643000" />
+    <option name="totallyTimeSpent" value="29096000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -730,7 +751,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2638889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -770,6 +791,141 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7021">
+          <caret line="415" column="46" lean-forward="false" selection-start-line="415" selection-start-column="46" selection-end-line="415" selection-end-column="46" />
+          <folding>
+            <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+            <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+            <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+            <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+            <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7055">
+          <caret line="415" column="46" lean-forward="false" selection-start-line="415" selection-start-column="46" selection-end-line="415" selection-end-column="46" />
+          <folding>
+            <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+            <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+            <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+            <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+            <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7055">
+          <caret line="415" column="46" lean-forward="false" selection-start-line="415" selection-start-column="46" selection-end-line="415" selection-end-column="46" />
+          <folding>
+            <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+            <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+            <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+            <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+            <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Speciality.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -783,30 +939,34 @@
         <state relative-caret-position="3791">
           <caret line="225" column="94" lean-forward="false" selection-start-line="225" selection-start-column="94" selection-end-line="225" selection-end-column="94" />
           <folding>
-            <marker date="1484364457426" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="2838:2910" ph="Select group... groupT" />
-            <marker date="1484364457426" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
-            <marker date="1484364457426" expanded="true" signature="4558:4883" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="5554:5796" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="6496:6680" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="7278:7351" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="8002:8585" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9500" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9501" ph="select subje... Subject" />
-            <marker date="1484364457426" expanded="true" signature="10172:10338" ph="SELECT idCaf... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="10897:10951" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11909" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11911" ph="SELECT Cafed... Cafedra" />
-            <marker date="1484364457426" expanded="true" signature="12620:12829" ph="SELECT speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="13437:13640" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14544" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14545" ph="select Speci... Speciality" />
-            <marker date="1484364457426" expanded="true" signature="15238:15456" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16883" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16884" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18101" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18102" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+            <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+            <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+            <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+            <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
           </folding>
         </state>
       </provider>
@@ -849,30 +1009,34 @@
         <state relative-caret-position="1955">
           <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <marker date="1484364457426" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="2838:2910" ph="Select group... groupT" />
-            <marker date="1484364457426" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
-            <marker date="1484364457426" expanded="true" signature="4558:4883" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="5554:5796" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="6496:6680" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="7278:7351" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="8002:8585" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9500" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9501" ph="select subje... Subject" />
-            <marker date="1484364457426" expanded="true" signature="10172:10338" ph="SELECT idCaf... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="10897:10951" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11909" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11911" ph="SELECT Cafed... Cafedra" />
-            <marker date="1484364457426" expanded="true" signature="12620:12829" ph="SELECT speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="13437:13640" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14544" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14545" ph="select Speci... Speciality" />
-            <marker date="1484364457426" expanded="true" signature="15238:15456" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16883" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16884" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18101" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18102" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+            <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+            <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+            <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+            <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
           </folding>
         </state>
       </provider>
@@ -889,10 +1053,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#218#219#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -924,30 +1085,34 @@
         <state relative-caret-position="1955">
           <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <marker date="1484364457426" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="2838:2910" ph="Select group... groupT" />
-            <marker date="1484364457426" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
-            <marker date="1484364457426" expanded="true" signature="4558:4883" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="5554:5796" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="6496:6680" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="7278:7351" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="8002:8585" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9500" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9501" ph="select subje... Subject" />
-            <marker date="1484364457426" expanded="true" signature="10172:10338" ph="SELECT idCaf... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="10897:10951" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11909" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11911" ph="SELECT Cafed... Cafedra" />
-            <marker date="1484364457426" expanded="true" signature="12620:12829" ph="SELECT speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="13437:13640" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14544" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14545" ph="select Speci... Speciality" />
-            <marker date="1484364457426" expanded="true" signature="15238:15456" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16883" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16884" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18101" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18102" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+            <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+            <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+            <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+            <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
           </folding>
         </state>
       </provider>
@@ -964,10 +1129,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#218#219#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -991,30 +1153,34 @@
         <state relative-caret-position="1955">
           <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <marker date="1484364457426" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="2838:2910" ph="Select group... groupT" />
-            <marker date="1484364457426" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
-            <marker date="1484364457426" expanded="true" signature="4558:4883" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="5554:5796" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="6496:6680" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="7278:7351" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="8002:8585" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9500" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9501" ph="select subje... Subject" />
-            <marker date="1484364457426" expanded="true" signature="10172:10338" ph="SELECT idCaf... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="10897:10951" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11909" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11911" ph="SELECT Cafed... Cafedra" />
-            <marker date="1484364457426" expanded="true" signature="12620:12829" ph="SELECT speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="13437:13640" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14544" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14545" ph="select Speci... Speciality" />
-            <marker date="1484364457426" expanded="true" signature="15238:15456" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16883" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16884" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18101" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18102" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+            <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+            <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+            <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+            <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
           </folding>
         </state>
       </provider>
@@ -1031,10 +1197,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#218#219#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,30 +1221,34 @@
         <state relative-caret-position="1955">
           <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <marker date="1484364457426" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="2838:2910" ph="Select group... groupT" />
-            <marker date="1484364457426" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
-            <marker date="1484364457426" expanded="true" signature="4558:4883" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="5554:5796" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="6496:6680" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="7278:7351" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="8002:8585" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9500" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9501" ph="select subje... Subject" />
-            <marker date="1484364457426" expanded="true" signature="10172:10338" ph="SELECT idCaf... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="10897:10951" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11909" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11911" ph="SELECT Cafed... Cafedra" />
-            <marker date="1484364457426" expanded="true" signature="12620:12829" ph="SELECT speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="13437:13640" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14544" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14545" ph="select Speci... Speciality" />
-            <marker date="1484364457426" expanded="true" signature="15238:15456" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16883" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16884" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18101" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18102" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+            <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+            <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+            <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+            <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
           </folding>
         </state>
       </provider>
@@ -1098,10 +1265,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#218#219#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1168,37 +1332,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#218#219#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#311#312#0" expanded="false" />
+            <element signature="e#339#340#0" expanded="false" />
+            <element signature="e#373#374#0" expanded="false" />
+            <element signature="e#403#404#0" expanded="false" />
+            <element signature="e#449#450#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#585#586#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#739#740#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1208,6 +1361,46 @@
         <state relative-caret-position="119">
           <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/SubjectWithTeacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,41 +1416,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/DBWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="415" column="46" lean-forward="false" selection-start-line="415" selection-start-column="46" selection-end-line="415" selection-end-column="46" />
+        <state relative-caret-position="273">
+          <caret line="221" column="45" lean-forward="false" selection-start-line="221" selection-start-column="45" selection-end-line="221" selection-end-column="45" />
           <folding>
-            <marker date="1484364457426" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
-            <marker date="1484364457426" expanded="true" signature="2838:2910" ph="Select group... groupT" />
-            <marker date="1484364457426" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
-            <marker date="1484364457426" expanded="true" signature="4558:4883" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="5554:5796" ph="select group... groupt" />
-            <marker date="1484364457426" expanded="true" signature="6496:6680" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="7278:7351" ph="select idSub... subject" />
-            <marker date="1484364457426" expanded="true" signature="8002:8585" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9500" ph="Select subje... subject" />
-            <marker date="1484364457426" expanded="true" signature="9229:9501" ph="select subje... Subject" />
-            <marker date="1484364457426" expanded="true" signature="10172:10338" ph="SELECT idCaf... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="10897:10951" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11909" ph="select * fro... cafedra" />
-            <marker date="1484364457426" expanded="true" signature="11629:11911" ph="SELECT Cafed... Cafedra" />
-            <marker date="1484364457426" expanded="true" signature="12620:12829" ph="SELECT speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="13437:13640" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14544" ph="select speci... speciality" />
-            <marker date="1484364457426" expanded="true" signature="14340:14545" ph="select Speci... Speciality" />
-            <marker date="1484364457426" expanded="true" signature="15238:15456" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16883" ph="SELECT teach... teacher" />
-            <marker date="1484364457426" expanded="true" signature="16289:16884" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18101" ph="select disti... teacher" />
-            <marker date="1484364457426" expanded="true" signature="17760:18102" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="1115:1193" ph="Select facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="1749:2114" ph="SELECT facul... faculty" />
+            <marker date="1484483879783" expanded="true" signature="2838:2910" ph="Select group... groupT" />
+            <marker date="1484483879783" expanded="true" signature="3483:3891" ph="SELECT idGro... groupt" />
+            <marker date="1484483879783" expanded="true" signature="4558:4883" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="5554:5796" ph="select group... groupt" />
+            <marker date="1484483879783" expanded="true" signature="6496:6680" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="7278:7351" ph="select idSub... subject" />
+            <marker date="1484483879783" expanded="true" signature="8026:8471" ph="SELECT Subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="9447:10030" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10945" ph="Select subje... subject" />
+            <marker date="1484483879783" expanded="true" signature="10674:10946" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="11592:12027" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13086" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="12706:13087" ph="select subje... Subject" />
+            <marker date="1484483879783" expanded="true" signature="13790:13956" ph="SELECT idCaf... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="14515:14569" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15527" ph="select * fro... cafedra" />
+            <marker date="1484483879783" expanded="true" signature="15247:15529" ph="SELECT Cafed... Cafedra" />
+            <marker date="1484483879783" expanded="true" signature="16238:16447" ph="SELECT speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17055:17258" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18162" ph="select speci... speciality" />
+            <marker date="1484483879783" expanded="true" signature="17958:18163" ph="select Speci... Speciality" />
+            <marker date="1484483879783" expanded="true" signature="18856:19074" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20501" ph="SELECT teach... teacher" />
+            <marker date="1484483879783" expanded="true" signature="19907:20502" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21719" ph="select disti... teacher" />
+            <marker date="1484483879783" expanded="true" signature="21378:21720" ph="select disti... teacher" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coursework_server/MyResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="224" column="43" lean-forward="true" selection-start-line="224" selection-start-column="43" selection-end-line="224" selection-end-column="43" />
+        <state relative-caret-position="188">
+          <caret line="110" column="41" lean-forward="false" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="41" />
           <folding />
         </state>
       </provider>

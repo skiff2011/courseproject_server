@@ -108,6 +108,17 @@ public class MyResource {
     }
 
     @GET
+    @Path("subjects/teacher/bygroupid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getAllSubjectsWithTeacherByGroupId(@Context UriInfo info){
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<SubjectWithTeacher> list=worker.getAllSubjectsWithTeacherByGroupId(groupId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
     @Path("subjects/byfacid/get")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getSubjectsByFacId(@Context UriInfo info){
@@ -125,6 +136,28 @@ public class MyResource {
         int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
         DBWorker worker=new DBWorker();
         List<Subject> list=worker.getAllSubjectsByGroupId(groupId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("subjects/bycafid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getSubjectsByCafId(@Context UriInfo info){
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Subject> list=worker.getAllSubjectsByCafId(groupId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("subjects/byspecid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getSubjectsBySpecId(@Context UriInfo info){
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
+        DBWorker worker=new DBWorker();
+        List<Subject> list=worker.getAllSubjectsBySpecId(groupId);
         worker.closeConnection();
         return sendList(list);
     }
@@ -197,7 +230,7 @@ public class MyResource {
     @Path("teachers/bysubname/get")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getTeachersBySubName(@Context UriInfo info){
-        String subName=info.getQueryParameters().getFirst("subname");
+        String subName=info.getQueryParameters().getFirst("name");
         DBWorker worker=new DBWorker();
         List<Teacher> list=worker.getTeachersBySubName(subName);
         worker.closeConnection();

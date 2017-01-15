@@ -196,6 +196,34 @@ public class DBWorker {
         }
     }
 
+    public List<SubjectWithTeacher> getAllSubjectsWithTeacherByGroupId(int groupId){
+        try {
+            PreparedStatement statement=connection.prepareStatement("SELECT Subject.idSubject, Subject.Name,teacher.idTeacher,teacher.Surname,teacher.Name,teacher.Patronymic\n" +
+                    "FROM Subject \n" +
+                    "JOIN teacher ON teacher.idTeacher=Subject.idTeacher_fk\n" +
+                    "JOIN GroupSubject ON GroupSubject.idSubject = Subject.idSubject\n" +
+                    "JOIN GroupT ON GroupSubject.idGroup = GroupT.idGroup\n" +
+                    "WHERE GroupT.idGroup = ?");
+            statement.setInt(1,groupId);
+            ResultSet set=statement.executeQuery();
+            List<SubjectWithTeacher> list=new ArrayList<>();
+            while (set.next()){
+                SubjectWithTeacher subject=new SubjectWithTeacher();
+                subject.setIdS(set.getInt("idSubject"));
+                subject.setNameS(set.getString("Subject.Name"));
+                subject.setId(set.getInt("idTeacher"));
+                subject.setSurname((set.getString("Surname")));
+                subject.setName(set.getString("teacher.Name"));
+                subject.setPatronymic(set.getString("Patronymic"));
+                list.add(subject);
+            }
+            return list;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
        public List<Subject> getAllSubjectsByFacId(int facId){
         try{
             PreparedStatement statement=connection.prepareStatement("Select  subject.idSubject, subject.Name from subject\n" +
@@ -238,6 +266,52 @@ public class DBWorker {
             }
             return subjects;
         } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public List<Subject> getAllSubjectsByCafId(int cafedraId){
+        try{
+            PreparedStatement statement=connection.prepareStatement("select subject.idSubject,subject.Name from Subject \n" +
+                    "join GroupSubject on GroupSubject.idSubject = Subject.idSubject\n" +
+                    "join GroupT on GroupT.idGroup = GroupSubject.idGroup       \n" +
+                    "join Speciality on Speciality.idSpeciality = GroupT.idSpeciality_fk\n" +
+                    "join Cafedra on Speciality.idCafedra_fk = Cafedra.idCafedra where Cafedra.idCafedra = ?");
+            statement.setInt(1,cafedraId);
+            ResultSet set=statement.executeQuery();
+            List<Subject> subjects=new ArrayList<>();
+            while (set.next()){
+                Subject subject=new Subject();
+                subject.setId(set.getInt("idSubject"));
+                subject.setName(set.getString("Name"));
+                subjects.add(subject);
+            }
+            return subjects;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public List<Subject> getAllSubjectsBySpecId(int specId){
+        try{
+            PreparedStatement statement=connection.prepareStatement("select subject.idSubject,subject.Name from Subject \n" +
+                    "join GroupSubject on GroupSubject.idSubject = Subject.idSubject\n" +
+                    "join GroupT on GroupT.idGroup = GroupSubject.idGroup       \n" +
+                    "join Speciality on Speciality.idSpeciality = GroupT.idSpeciality_fk\n" +
+                    "where Speciality.idSpeciality = ?");
+            statement.setInt(1,specId);
+            ResultSet set=statement.executeQuery();
+            List<Subject> subjects=new ArrayList<>();
+            while (set.next()){
+                Subject subject=new Subject();
+                subject.setId(set.getInt("idSubject"));
+                subject.setName(set.getString("Name"));
+                subjects.add(subject);
+            }
+            return subjects;
+        } catch (SQLException e) {
+            e.printStackTrace();
             return null;
         }
     }
