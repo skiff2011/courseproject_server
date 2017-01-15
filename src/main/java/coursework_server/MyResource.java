@@ -260,6 +260,18 @@ public class MyResource {
         return  sendList(list);
     }
 
+    @GET
+    @Path("students/bysubidandgroupid/getall")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getSrudentsBySubIdAndGroupId(@Context UriInfo info){
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("idG"));
+        int subId=Integer.parseInt(info.getQueryParameters().getFirst("idS"));
+        DBWorker worker=new DBWorker();
+        List<Student> list=worker.getStudentsBySubAndGroup(subId,groupId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
     private Response sendList(List list){
         if(list!=null){
             Gson gson=new Gson();
