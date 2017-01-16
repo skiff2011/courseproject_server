@@ -160,6 +160,55 @@ public class DBWorker {
         }
     }
 
+    public List<Group> getGroupsByTeachId(int teachId) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("Select GroupT.idGroup, GroupT.Name from GroupT\n" +
+                    "join GroupSubject on  GroupSubject.idGroup = GroupT.idGroup\n" +
+                    "join Subject on GroupSubject.idSubject = Subject.idSubject \n" +
+                    "where (Subject.idTeacher_fk = ?) \n" +
+                    "order by GroupT.Name asc;");
+            statement.setInt(1, teachId);
+            List<Group> groups = new ArrayList<>();
+            ResultSet set = statement.executeQuery();
+            while (set.next()) {
+                Group group = new Group();
+                group.setId(set.getInt("idGroup"));
+                group.setName(set.getString("Name"));
+                groups.add(group);
+            }
+            return groups;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    public List<Group> getGroupsByTeachIdAndSubId(int teachId,int subId) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("Select GroupT.idGroup, GroupT.Name from GroupT\n" +
+                    "join GroupSubject on  GroupSubject.idGroup = GroupT.idGroup\n" +
+                    "join Subject on GroupSubject.idSubject = Subject.idSubject \n" +
+                    "where (Subject.idTeacher_fk = ? AND Subject.idSubject = ?) \n" +
+                    "order by GroupT.Name asc");
+            statement.setInt(1, teachId);
+            statement.setInt(2,subId);
+            List<Group> groups = new ArrayList<>();
+            ResultSet set = statement.executeQuery();
+            while (set.next()) {
+                Group group = new Group();
+                group.setId(set.getInt("idGroup"));
+                group.setName(set.getString("Name"));
+                groups.add(group);
+            }
+            return groups;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+
+
     public List<Subject> getAllSubjects() {
         try {
             Statement statement = connection.createStatement();
@@ -301,6 +350,48 @@ public class DBWorker {
                     "JOIN Speciality ON Speciality.idSpeciality = GroupT.idSpeciality_fk\n" +
                     "WHERE Speciality.idSpeciality = ?");
             statement.setInt(1, specId);
+            ResultSet set = statement.executeQuery();
+            List<Subject> subjects = new ArrayList<>();
+            while (set.next()) {
+                Subject subject = new Subject();
+                subject.setId(set.getInt("idSubject"));
+                subject.setName(set.getString("Name"));
+                subjects.add(subject);
+            }
+            return subjects;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public List<Subject> getAllSubjectsByGroupIdAndTeachId(int groupId,int teachId) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("select groupsubject.idSubject, Subject.Name from Subject\n" +
+                    "join GroupSubject on GroupSubject.idSubject = Subject.idSubject\n" +
+                    "where (Subject.idTeacher_fk = ? AND GroupSubject.idGroup = ?)");
+            statement.setInt(1, teachId);
+            statement.setInt(2, groupId);
+            ResultSet set = statement.executeQuery();
+            List<Subject> subjects = new ArrayList<>();
+            while (set.next()) {
+                Subject subject = new Subject();
+                subject.setId(set.getInt("idSubject"));
+                subject.setName(set.getString("Name"));
+                subjects.add(subject);
+            }
+            return subjects;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public List<Subject> getAllSubjectsByTeachId(int teachId) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("select idSubject, Subject.Name from Subject \n" +
+                    "where (Subject.idTeacher_fk = ?)");
+            statement.setInt(1, teachId);
             ResultSet set = statement.executeQuery();
             List<Subject> subjects = new ArrayList<>();
             while (set.next()) {

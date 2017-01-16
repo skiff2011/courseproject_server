@@ -85,6 +85,29 @@ public class MyResource {
     }
 
     @GET
+    @Path("groups/byteachid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getGroupsByTeachId(@Context UriInfo info){
+        int specialityId=Integer.parseInt(info.getQueryParameters().getFirst("idT"));
+        DBWorker worker=new DBWorker();
+        List<Group> list=worker.getGroupsByTeachId(specialityId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("groups/byteachidandsubid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getGroupsByTeachIdAndSubId(@Context UriInfo info){
+        int subId=Integer.parseInt(info.getQueryParameters().getFirst("idS"));
+        int teachId=Integer.parseInt(info.getQueryParameters().getFirst("idT"));
+        DBWorker worker=new DBWorker();
+        List<Group> list=worker.getGroupsByTeachIdAndSubId(teachId,subId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
     @Path("subjects/getall")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getAllSubjects(@Context UriInfo info){
@@ -155,6 +178,29 @@ public class MyResource {
         int groupId=Integer.parseInt(info.getQueryParameters().getFirst("id"));
         DBWorker worker=new DBWorker();
         List<Subject> list=worker.getAllSubjectsBySpecId(groupId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("subjects/bygroupidandteachid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getSubjectsByGroupIdAndTeacherId(@Context UriInfo info){
+        int groupId=Integer.parseInt(info.getQueryParameters().getFirst("idG"));
+        int teachId=Integer.parseInt(info.getQueryParameters().getFirst("idT"));
+        DBWorker worker=new DBWorker();
+        List<Subject> list=worker.getAllSubjectsByGroupIdAndTeachId(groupId,teachId);
+        worker.closeConnection();
+        return sendList(list);
+    }
+
+    @GET
+    @Path("subjects/byteachid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getSubjectsByTeacherId(@Context UriInfo info){
+        int teachId=Integer.parseInt(info.getQueryParameters().getFirst("idT"));
+        DBWorker worker=new DBWorker();
+        List<Subject> list=worker.getAllSubjectsByTeachId(teachId);
         worker.closeConnection();
         return sendList(list);
     }
