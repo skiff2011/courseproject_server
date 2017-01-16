@@ -174,6 +174,7 @@ public class DBWorker {
                 Group group = new Group();
                 group.setId(set.getInt("idGroup"));
                 group.setName(set.getString("Name"));
+                if (!groups.contains(group))
                 groups.add(group);
             }
             return groups;
@@ -185,7 +186,7 @@ public class DBWorker {
 
     public List<Group> getGroupsByTeachIdAndSubId(int teachId,int subId) {
         try {
-            PreparedStatement statement = connection.prepareStatement("Select GroupT.idGroup, GroupT.Name from GroupT\n" +
+            PreparedStatement statement = connection.prepareStatement("Select DISTINCT GroupT.idGroup, GroupT.Name from GroupT\n" +
                     "join GroupSubject on  GroupSubject.idGroup = GroupT.idGroup\n" +
                     "join Subject on GroupSubject.idSubject = Subject.idSubject \n" +
                     "where (Subject.idTeacher_fk = ? AND Subject.idSubject = ?) \n" +

@@ -26,4 +26,17 @@ public class Group {
         this.name = name;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Group student = (Group) obj;
+        if (id != student.id)
+            return false;
+        return true;
+    }
 }
