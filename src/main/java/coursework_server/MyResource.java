@@ -304,6 +304,17 @@ public class MyResource {
     }
 
     @GET
+    @Path("teachers/byid/get")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getTeachersById(@Context UriInfo info){
+        int id=Integer.valueOf(info.getQueryParameters().getFirst("idT"));
+        DBWorker worker=new DBWorker();
+        List<Teacher> list=worker.getTeachersId(id);
+        worker.closeConnection();
+        return  sendList(list);
+    }
+
+    @GET
     @Path("students/bysubidandgroupid/getall")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getSrudentsBySubIdAndGroupId(@Context UriInfo info){
@@ -334,6 +345,18 @@ public class MyResource {
                 .allow("OPTIONS").build();
     }
 
+    @POST
+    @Path("auth")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response auth(@Context UriInfo info){
+        String login=info.getQueryParameters().getFirst("l");
+        String pass=info.getQueryParameters().getFirst("p");
+        DBWorker worker=new DBWorker();
+        List<Status> statuses=worker.auth(login,pass);
+        worker.closeConnection();
+        return sendList(statuses);
+    }
+
     private Response sendList(List list){
         if(list!=null){
             Gson gson=new Gson();
@@ -347,4 +370,6 @@ public class MyResource {
                     .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
                     .allow("OPTIONS").build();
     }
+
+
 }

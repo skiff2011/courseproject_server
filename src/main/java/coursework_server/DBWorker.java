@@ -547,6 +547,25 @@ public class DBWorker {
         }
     }
 
+    public List<Teacher> getTeachersId(int id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("select Teacher.Surname, Teacher.Name, Teacher.Patronymic from Teacher where(Teacher.idTeacher =?)");
+            statement.setInt(1, id);
+            List<Teacher> teachers = new ArrayList<>();
+            ResultSet set = statement.executeQuery();
+            while (set.next()) {
+                Teacher teacher = new Teacher();
+                teacher.setSurname(set.getString("teacher.Surname"));
+                teacher.setName(set.getString("teacher.Name"));
+                teacher.setPatronymic(set.getString("teacher.Patronymic"));
+                teachers.add(teacher);
+            }
+            return teachers;
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
     public List<Teacher> getTeachersBySubNameAndFacId(String subName, int facultyId) {
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT DISTINCT teacher.idTeacher,teacher.Surname,teacher.Name,teacher.Patronymic FROM teacher\n" +
@@ -648,5 +667,35 @@ public class DBWorker {
                 student.putAttest(marks, lection, works, attest,connection,subId);
                 System.out.println(student.toString());
             }
+    }
+
+    public List<Status> auth(String login,String password){
+        List<Status> list=new ArrayList<>();
+        Status status=new Status();
+        status.setId(0);
+        status.setStatus("false");
+        list.add(status);
+        try{
+            Statement statement=connection.createStatement();
+            ResultSet set=statement.executeQuery("select Loging.User, Loging.password, Loging.idTeacher from Loging");
+            ArrayList<User> users=new ArrayList<>();
+            while (set.next()){
+                User user=new User();
+                user.setLogin(set.getString("Loging.User"));
+                user.setPassword(set.getString("Loging.password"));
+                user.setId(set.getInt("Loging.idTeacher"));
+                users.add(user);
+            }
+            for (User user:users) {
+                if(user.getLogin().equals(login)&&user.getPassword().equals(password)){
+                    list.get(0).setId(user.getId());
+                    list.get(0).setStatus("true");
+                    break;
+                }
+            }
+            return list;
+        } catch (SQLException e) {
+            return list;
+        }
     }
 }
